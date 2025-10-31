@@ -1,6 +1,25 @@
 def sao_anagramas(string1, string2):
-    # TODO: Implementar a lógica
-    pass
+
+   
+    contagem1 = {}
+    contagem2 = {}
+    
+    
+    for letra in string1:
+        if letra in contagem1:
+            contagem1[letra] = contagem1[letra] + 1
+        else:
+            contagem1[letra] = 1
+    
+    
+    for letra in string2:
+        if letra in contagem2:
+            contagem2[letra] = contagem2[letra] + 1
+        else:
+            contagem2[letra] = 1
+    
+    
+    return contagem1 == contagem2
 
 def cifra_de_cesar(texto, deslocamento):
     # TODO: Implementar a lógica
