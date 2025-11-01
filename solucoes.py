@@ -31,7 +31,6 @@ def cifra_de_cesar(texto, deslocamento):
 
 def encontrar_maior_palavra(frase):
     palavras = frase.split(" ")
-    print(palavras)
     
     x = palavras[0]
     for p in palavras:
