@@ -35,6 +35,13 @@ def cifra_de_cesar(texto, deslocamento):
     
     return resultado
 
-def valida_cpf(cpf_string):
-    # TODO: Implementar a lógica
-    pass
+def encontrar_maior_palavra(frase):
+    palavras = frase.split(" ")
+    
+    maior = ""
+    for palavra in palavras:
+        palavra_limpa = ''.join(filter(str.isalpha, palavra))
+        if len(palavra_limpa) > len(maior):
+            maior = palavra_limpa
+    
+    return maior
