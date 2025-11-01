@@ -32,9 +32,10 @@ def cifra_de_cesar(texto, deslocamento):
 def encontrar_maior_palavra(frase):
     palavras = frase.split(" ")
     
-    x = palavras[0]
-    for p in palavras:
-        if len(p) > len(x):
-            x = p
+    maior = ""
+    for palavra in palavras:
+        palavra_limpa = ''.join(filter(str.isalpha, palavra))
+        if len(palavra_limpa) > len(maior):
+            maior = palavra_limpa
     
-    return x
+    return maior
